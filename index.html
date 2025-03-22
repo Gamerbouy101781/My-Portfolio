@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME | NA BALOYI</title>
+  <meta name="description" content="A modern blog website.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "config": "./config.js",
+        "utils": "./utils.js",
+        "analytics": "./analytics.js"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="#">BALOYI</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Education</a></li>
+        <li><a href="interact.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I'm Nhlamulo Baloyi, a passionate Web Developer.</p>
+      <video width="500" height="400" controls poster="fallback_image.jpg" 
+        style="border-width: 5px; /* Set the border thickness */
+               border-style: solid; /* Solid border type */
+               border-image: linear-gradient(45deg, #ff0080, #ff8c00, #00b3b3, #0080ff);
+               border-image-slice: 1;
+               border-radius: 15px;
+               box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+               transition: transform 0.3s ease-in-out;">
+        <source src="intro.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <!-- Project Mockups Section -->
+    <section class="project-mockups" style="text-align: center; padding: 2rem 0;">
+      <h2 class="centered" style="font-size: 2rem; font-weight: bold; color: #333;">Project Mockups</h2>
+      <b><p style="font-size: 1rem; color: #555;">Here are some of the mockups and ideas I've been working on. These projects showcase the design and development process, even if they're not fully implemented yet.</p></b>
+
+      <div class="mockup-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        <div class="mockup-item" style="width: 280px; margin-bottom: 2rem;">
+          <div class="card" style="border: 2px solid #000; border-radius: 10px; padding: 1rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="web.png" alt="Project Mockup 1" class="mockup-image" style="width: 100%; height: auto; border-radius: 5px; cursor: pointer;" onclick="openLightbox(this)">
+            <h3 style="font-size: 1.25rem; margin-top: 1rem; color: #333;">Web Development in Action</h3>
+            <b><p style="font-size: 1rem; color: #555; margin-top: 0.5rem;">A snapshot of the core HTML structure behind my portfolio website...</p></b>
+          </div>
+        </div>
+
+        <div class="mockup-item" style="width: 280px; margin-bottom: 2rem;">
+          <div class="card" style="border: 2px solid #000; border-radius: 10px; padding: 1rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="java.png" alt="Project Mockup 2" class="mockup-image" style="width: 100%; height: auto; border-radius: 5px; cursor: pointer;" onclick="openLightbox(this)">
+            <h3 style="font-size: 1.25rem; margin-top: 1rem; color: #333;">Config.js – Powering the Backend</h3>
+            <b><p style="font-size: 1rem; color: #555; margin-top: 0.5rem;">This config.js file manages key settings and configurations for my project, ensuring smooth functionality and seamless integration.</p></b>
+          </div>
+        </div>
+
+        <div class="mockup-item" style="width: 280px; margin-bottom: 2rem;">
+          <div class="card" style="border: 2px solid #000; border-radius: 10px; padding: 1rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="calculator.png" alt="Project Mockup 3" class="mockup-image" style="width: 100%; height: auto; border-radius: 5px; cursor: pointer;" onclick="openLightbox(this)">
+            <h3 style="font-size: 1.25rem; margin-top: 1rem; color: #333;">Advanced Scientific Calculator – Python Code</h3>
+            <b><p style="font-size: 1rem; color: #555; margin-top: 0.5rem;">A fully functional scientific calculator built with Python, featuring advanced mathematical operations for accurate and efficient calculations.</p></b>
+          </div>
+        </div>
+
+        <div class="mockup-item" style="width: 280px; margin-bottom: 2rem;">
+          <div class="card" style="border: 2px solid #000; border-radius: 10px; padding: 1rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="style.png" alt="Project Mockup 4" class="mockup-image" style="width: 100%; height: auto; border-radius: 5px; cursor: pointer;" onclick="openLightbox(this)">
+            <h3 style="font-size: 1.25rem; margin-top: 1rem; color: #333;">Advanced CSS – Styling in Action</h3>
+            <b><p style="font-size: 1rem; color: #555; margin-top: 0.5rem;">This advanced CSS code enhances the visual appeal of my project, implementing modern styling techniques for a sleek and responsive design.</p></b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal (hidden by default) -->
+    <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
+      <img id="lightbox-img" src="" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+      <span onclick="closeLightbox()" style="position: absolute; top: 10px; right: 10px; color: #fff; font-size: 30px; cursor: pointer;">&times;</span>
+    </div>
+
+    <script>
+      // Function to open the lightbox
+      function openLightbox(imgElement) {
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = imgElement.src; // Set the source of the lightbox image to the clicked image
+        lightbox.style.display = 'flex'; // Display the lightbox
+      }
+
+      // Function to close the lightbox
+      function closeLightbox() {
+        var lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none'; // Hide the lightbox
+      }
+    </script>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="cta-content">
+        <h2>Let’s Build the Future Together!</h2>
+        <p>"Passionate about clean code and innovative solutions? Whether it's crafting a sleek website, optimizing performance, or solving complex problems, I'm always up for a challenge!"</p>
+        <p><strong>Got a project in mind? Let’s make it happen!</strong></p>
+        <div class="cta-buttons">
+          <a href="interact.html" class="cta-button">Projects</a>
+          <a href="#hire-me" class="cta-button cta-hire">Hire Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Code -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

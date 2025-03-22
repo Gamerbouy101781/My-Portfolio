@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Nhlamulo Baloyi</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Link to the project.css file -->
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="importmap">
+    {
+      "imports": {
+        "config": "./config.js",
+        "utils": "./utils.js",
+        "analytics": "./analytics.js"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">BALOYI</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Education</a></li>
+        <li><a href="interact.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+  </header>
+  <br></br>
+
+  <main>
+    <section class="projects-section" id="projects">
+      <div class="projects-container">
+        <h2>Check Out My Interactive Projects</h2>
+
+        <!-- Project 3: Interactive Code Compiler -->
+        <div class="project-card">
+            <h3>Interactive HTML Compiler</h3>
+            <p>A project where you can run HTML directly from my portfolio. Try it out and see your code in action!</p>
+
+            <!-- Code Editor -->
+            <div class="container">
+              <div id="editor">.</div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+
+            <script>
+              // Initialize the Ace Editor
+              const editor = ace.edit("editor");
+              editor.setTheme("ace/theme/monokai");
+              editor.getSession().setMode("ace/mode/html");  // Default to HTML mode
+
+              // Function to run the code
+              function runCode() {
+                // Get the code written in the editor
+                const code = editor.getValue();
+
+                // Get the output div and previewing text element
+                const outputDiv = document.getElementById("output");
+                const previewText = document.getElementById("preview-text");
+
+                // Show "Previewing..." text inside the output div
+                previewText.style.display = "block"; // Show the previewing text
+
+                // Clear previous output (if any)
+                outputDiv.innerHTML = '';
+
+                // Create an iframe to render the HTML content
+                const iframe = document.createElement("iframe");
+                iframe.style.width = "100%";
+                iframe.style.height = "500px"; // You can adjust the height as needed
+
+                // Append the iframe to the output div
+                outputDiv.appendChild(iframe);
+
+                // After 1 second, display the actual code in the iframe
+                setTimeout(() => {
+                    previewText.style.display = "none"; // Hide the previewing text
+                    const iframeDoc = iframe.contentWindow.document;
+                    iframeDoc.open();
+                    iframeDoc.write(code); // Write the code to the iframe
+                    iframeDoc.close(); // Close the iframe document
+                }, 1000); // Adjust the delay time here
+              }
+
+              // Function to clear the editor and output
+              function clearCode() {
+                  editor.setValue('');  // Clear the editor
+                  const outputDiv = document.getElementById("output");
+                  outputDiv.innerHTML = '';  // Clear the output section
+                  document.getElementById("preview-text").style.display = "none"; // Hide the previewing text
+              }
+            </script>
+
+            <!-- Add some CSS -->
+            <style>
+              #output-container {
+                margin-top: 20px;
+              }
+
+              #output {
+                background-color: #f8f8f8;
+                padding: 20px;
+                border-radius: 5px;
+                min-height: 200px;
+                border: 1px solid #ddd;
+              }
+
+              #output p {
+                font-size: 24px;
+                color: #555;
+              }
+
+              .btn-container {
+                margin-top: 20px;
+              }
+
+              button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                margin-right: 10px;
+              }
+
+              button:hover {
+                background-color: #45a049;
+              }
+
+              /* Hide "Previewing..." text initially */
+              #preview-text {
+                display: none;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+              }
+            </style>
+
+            <!-- HTML Part: Output and Buttons -->
+            <div id="output-container">
+                <!-- Previewing Text -->
+                <div id="preview-text">Previewing...</div>
+
+                <!-- Output Section -->
+                <div id="output"></div>
+            </div>
+
+            <!-- Buttons to run and clear -->
+            <div class="btn-container">
+                <button onclick="runCode()">Run</button>
+                <button onclick="clearCode()">Clear</button>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Code -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+
+
+/* Style for the heading */
+.projects-container h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style for each project card inside the container */
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;  /* Space between project cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to each project card */
+}
+
+/* Style for project title inside each project card */
+.project-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style for project description inside each project card */
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.projects-container h2 {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 3px solid #f06; /* Border around the heading */
+    border-radius: 15px; /* Curved corners */
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+p {
+    display: block;
+    font-family: 'Pacifico', cursive;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-align: center;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}/* Remove borders from everything */
+* {
+  border: none !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the overall project section */
+.projects-section {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+/* Projects container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Project card */
+.project-card {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* No border here, it's shadowed for a cleaner look */
+}
+
+/* Remove borders and other unwanted styling from editor */
+#editor {
+  background-color: #2d2d2d;
+  color: #fff;
+  width: 60%;
+  height: 300px;
+  min-height: 200px; /* Set a minimum height for the editor */
+  font-family: "Courier New", Courier, monospace;
+  border: none !important; /* Remove the border from Ace editor */
+  padding: 15px;
+  margin-left: 280px;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Keep rounded corners */
+}
+
+/* Button styling without borders */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none !important; /* No borders for buttons */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Output section without borders */
+#output {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background-color: #f4f4f4; /* Dark background for the "screen" effect */
+  border-radius: 15px; /* Rounded corners for a sleek, TV-like look */
+  border: 10px solid #444; /* Dark border to give it a TV frame feel */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Soft glow effect around the screen */
+  color: #fff; /* White text color */
+  padding: 20px;
+  font-family: 'Courier New', monospace; /* Monospace font for code */
+  font-size: 16px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Footer Styling without borders */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;  /* Center the buttons horizontally */
+  gap: 10px;                /* Adds space between the buttons */
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none !important; /* No borders for buttons */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Adds space below the button */
+}
+
